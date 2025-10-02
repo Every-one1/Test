@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database files
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+
+# Streamlit config
+.streamlit/
+
+# Temporary verification files
+jules-scratch/
+*.log
+
+# Debugging artifacts
+debug.html
+forum_debug.html
