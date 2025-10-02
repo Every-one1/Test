@@ -22,7 +22,7 @@ The system is designed with a modular architecture, consisting of the following 
 
 ## Installation and Setup
 
-Follow these steps to get the application running on your local machine.
+Follow these steps to get the application running on your local machine. **All commands should be run from the root directory of the project.**
 
 ### 1. Prerequisites
 

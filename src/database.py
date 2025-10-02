@@ -1,17 +1,20 @@
 import sqlite3
 import os
 
+# Determine the absolute path to the project root directory
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+DB_PATH = os.path.join(PROJECT_ROOT, 'data', 'poe_data.db')
+
 def get_db_connection():
     """
-    Creates and returns a connection to the SQLite database.
+    Creates and returns a connection to the SQLite database using an absolute path.
     """
-    db_path = 'data/poe_data.db'
-
     # Create the 'data' directory if it doesn't exist
-    if not os.path.exists('data'):
-        os.makedirs('data')
+    data_dir = os.path.dirname(DB_PATH)
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
 
-    conn = sqlite3.connect(db_path)
+    conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     return conn
 
